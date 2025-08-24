@@ -1,2 +1,173 @@
-# H-B-NUTS
-Sales of Pecan Nuts
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>H&B Nuts – Farm-Fresh Pecans</title>
+  <meta name="description" content="H&B Nuts – farm-fresh pecans in the shell and roasted pecans in Garlic, Garlic & Herb, and Aromat flavours.">
+  <style>
+    :root {
+      --bg: #fffaf3;
+      --card: #ffffff;
+      --ink: #1b1b1b;
+      --muted: #5d5d5d;
+      --brand: #8c6136;
+      --accent: #e6d4bf;
+      --radius: 16px;
+      --shadow: 0 6px 20px rgba(0,0,0,.08);
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(8px);
+      background: rgba(255,250,243,.8);
+      border-bottom: 1px solid #eee4d8;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: .8rem 0; }
+    .brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; color: var(--ink); }
+    .brand img { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; }
+    .brand span { font-weight: 800; letter-spacing: .3px; font-size: 2rem; }
+    .links a { color: var(--ink); text-decoration: none; margin-left: 1rem; font-weight: 600; }
+    .links a:hover { color: var(--brand); }
+
+    .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items: center; padding: 3rem 0 2rem; }
+    .hero .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 2rem; }
+    .eyebrow { color: var(--brand); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; }
+    h1 { margin: .35rem 0 1rem; font-size: clamp(1.8rem, 3.5vw, 3rem); line-height: 1.1; }
+    .lead { color: var(--muted); font-size: clamp(1rem, 1.2vw, 1.1rem); }
+    .cta { display: flex; gap: .75rem; margin-top: 1.2rem; flex-wrap: wrap; }
+    .btn { appearance: none; border: 0; padding: .85rem 1.1rem; border-radius: 999px; font-weight: 700; cursor: pointer; text-decoration: none; }
+    .btn.primary { background: var(--brand); color: white; }
+    .btn.ghost { background: #efe6db; color: #4a3521; }
+    .hero-figure { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: #f2e7da; }
+    .hero-figure img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    section { padding: 2.5rem 0; }
+    h2 { font-size: clamp(1.4rem, 2.2vw, 2rem); margin: 0 0 1rem; }
+    .grid { display: grid; gap: 1.2rem; }
+
+    .cards { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; }
+    .card img { width: 100%; height: 200px; object-fit: cover; }
+    .card .body { padding: 1rem 1.1rem 1.2rem; }
+    .price { font-weight: 800; color: var(--brand); }
+    .badge { display: inline-block; padding: .25rem .6rem; border-radius: 999px; background: #f4eadf; color: #5b3c22; font-size: .8rem; font-weight: 700; margin-right: .4rem; }
+
+    .features { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .feature { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1rem 1.1rem; }
+
+    .gallery { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .gallery img { width: 100%; height: 220px; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+    footer { padding: 2rem 0 3rem; color: var(--muted); text-align: center; }
+
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <img src="WhatsApp Image 2025-08-23 at 13.06.04_b744af62.jpg" alt="H&B Nuts Logo">
+        <span>H&B Nuts</span>
+      </a>
+      <nav class="links">
+        <a href="#products">Products</a>
+        <a href="#flavours">Flavours</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#order">Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <div class="hero">
+      <div class="card">
+        <div class="eyebrow">Farm-fresh • Northern Cape</div>
+        <h1>Crunchy, wholesome <span style="color:var(--brand)">pecans</span> you’ll love</h1>
+        <p class="lead">We sell pecans in the shell and roasted, out-of-shell pecans in three crowd-favourite flavours. Healthy, tasty, and locally packed by the H&B Nuts family.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://wa.me/27842510175?text=Hi%20H%26B%20Nuts%2C%20I%27d%20like%20to%20order%20pecans!" target="_blank" rel="noopener">WhatsApp to Order</a>
+          <a class="btn ghost" href="#products">See Prices</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img src="WhatsApp Image 2025-08-24 at 16.26.38_df3afcf6.jpg" alt="Fresh pecans in rustic bowl">
+      </figure>
+    </div>
+
+    <section id="products">
+      <h2>Products & Prices</h2>
+      <div class="grid cards">
+        <article class="card">
+          <img src="WhatsApp Image 2025-08-24 at 16.26.38_45eda462.jpg" alt="Pecans in the shell">
+          <div class="body">
+            <h3>Pecans in the Shell</h3>
+            <p class="price">R60 <small>/ 500g</small></p>
+            <p>Premium, farm-fresh pecans with that satisfying crack. Great for snacking, baking, or gifting.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="WhatsApp Image 2025-08-24 at 16.26.39_a7f3d7dd.jpg" alt="Roasted pecans, out of shell">
+          <div class="body">
+            <h3>Roasted Pecans (Out of Shell)</h3>
+            <p class="price">R30 <small>/ 100g</small></p>
+            <p>Hand-roasted in small batches for maximum crunch and flavour. Perfect on-the-go or over salads and desserts.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="flavours">
+      <h2>Flavours</h2>
+      <div class="grid features">
+        <div class="feature"><span class="badge">New</span><strong> Garlic</strong><br><span class="muted">A bold, savoury classic.</span></div>
+        <div class="feature"><span class="badge">Popular</span><strong> Garlic & Herb</strong><br><span class="muted">A fragrant, moreish blend.</span></div>
+        <div class="feature"><span class="badge">Fan Favourite</span><strong> Aromat</strong><br><span class="muted">That irresistible South African savour.</span></div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="grid gallery">
+        <img src="WhatsApp Image 2025-08-23 at 13.06.04_b744af62.jpg" alt="H&B Nuts logo and branding">
+        <img src="WhatsApp Image 2025-08-24 at 16.26.38_df3afcf6.jpg" alt="Pecans close-up">
+        <img src="WhatsApp Image 2025-08-24 at 16.26.38_45eda462.jpg" alt="In-shell pecans">
+        <img src="WhatsApp Image 2025-08-24 at 16.26.39_a7f3d7dd.jpg" alt="Roasted pecans">
+      </div>
+    </section>
+
+    <section id="order">
+      <h2>Order & Contact</h2>
+      <div class="card" style="padding:1.2rem 1.3rem;">
+        <p style="margin:.2rem 0 .6rem">Ready to crunch? Message us directly:</p>
+        <div class="cta">
+          <a class="btn primary" href="https://wa.me/27842510175?text=Hi%20H%26B%20Nuts%2C%20I%27d%20like%20to%20order%20pecans!" target="_blank" rel="noopener">WhatsApp to Order</a>
+          <a class="btn ghost" href="mailto:henbnuts@gmail.com">Email Orders</a>
+        </div>
+        <p style="color:var(--muted); font-size:.95rem; margin-top:.8rem">Prices: R60 / 500g (in-shell) • R30 / 100g (roasted, out-of-shell). Flavours: Garlic, Garlic & Herb, Aromat.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> H&B Nuts • Family-grown, locally packed • Northern Cape, South Africa</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
