@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>H&B Nuts – Farm-Fresh Pecans</title>
-  <meta name="description" content="H&B Nuts – farm-fresh pecans in the shell and roasted pecans in Garlic, Garlic & Herb, and Aromat flavours.">
+  <meta name="description" content="H&B Nuts – farm-fresh pecans in the shell and roasted/toasted pecans in Garlic, Garlic & Herb, and Aromat flavours.">
   <style>
     /* ---------- Layout-stability fixes ---------- */
     *, *::before, *::after { box-sizing: border-box; }
@@ -69,8 +69,14 @@
 
     .cards { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; }
-    /* Reserveer hoogte vir produkbeelde */
-    .card img { width: 100%; height: 200px; object-fit: cover; aspect-ratio: 4 / 3; }
+
+    /* --- Landscape fix vir produk-vensters --- */
+    .img-frame { position: relative; height: 200px; overflow: hidden; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .img-frame img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 100%; width: auto; object-fit: cover; }
+    /* Gebruik die een wat reg lyk vir jou foto — 90° of 270° */
+    .rotate-90  img { transform: translate(-50%, -50%) rotate(90deg);  height: auto; width: 100%; }
+    .rotate-270 img { transform: translate(-50%, -50%) rotate(-90deg); height: auto; width: 100%; }
+
     .card .body { padding: 1rem 1.1rem 1.2rem; }
     .price { font-weight: 800; color: var(--brand); }
 
@@ -111,7 +117,7 @@
       <div class="card">
         <div class="eyebrow">Farm-fresh • Northern Cape</div>
         <h1>Crunchy, wholesome <span style="color:var(--brand)">pecans</span> you’ll love</h1>
-        <p class="lead">We sell pecans in the shell and roasted, out-of-shell pecans in three crowd-favourite flavours. Healthy, tasty, and locally packed by the H&B Nuts family.</p>
+        <p class="lead">We sell pecans in the shell and toasted pecans out of the shell in three flavours.</p>
         <div class="cta">
           <!-- WhatsApp nommer: SA-formaat sonder leading 0 -->
           <a class="btn primary" href="https://wa.me/27842510175?text=Hi%20H%26B%20Nuts%2C%20I%27d%20like%20to%20order%20pecans!" target="_blank" rel="noopener">WhatsApp to Order</a>
@@ -127,22 +133,31 @@
     <section id="products">
       <h2>Products & Prices</h2>
       <div class="grid cards">
+
+        <!-- Kaart 1: In-shell (gedraai landscape) -->
         <article class="card">
-          <img src="WhatsApp Image 2025-08-24 at 16.26.38_45eda462.jpg" alt="Pecans in the shell" loading="lazy">
+          <div class="img-frame rotate-90">
+            <img src="WhatsApp Image 2025-08-24 at 16.26.38_45eda462.jpg" alt="Pecans in the shell">
+          </div>
           <div class="body">
             <h3>Pecans in the Shell</h3>
             <p class="price">R60 <small>/ 500g</small></p>
             <p>Premium, farm-fresh pecans with that satisfying crack. Great for snacking, baking, or gifting.</p>
           </div>
         </article>
+
+        <!-- Kaart 2: Toasted (gedraai landscape) -->
         <article class="card">
-          <img src="WhatsApp Image 2025-08-24 at 16.26.39_a7f3d7dd.jpg" alt="Roasted pecans, out of shell" loading="lazy">
+          <div class="img-frame rotate-90">
+            <img src="WhatsApp Image 2025-08-24 at 16.26.39_a7f3d7dd.jpg" alt="Toasted pecans, out of shell">
+          </div>
           <div class="body">
-            <h3>Roasted Pecans (Out of Shell)</h3>
-            <p class="price">R30 <small>/ 100g</small></p>
-            <p>Hand-roasted in small batches for maximum crunch and flavour. Perfect on-the-go or over salads and desserts.</p>
+            <h3>Toasted Pecans (Out of Shell)</h3>
+            <p class="price">R30 <small>/ 75g</small></p>
+            <p>Hand-toasted in small batches for maximum crunch and flavour. Perfect on-the-go or over salads and desserts.</p>
           </div>
         </article>
+
       </div>
     </section>
 
@@ -160,10 +175,14 @@
     <section id="gallery">
       <h2>Gallery</h2>
       <div class="grid gallery">
-        <img src="WhatsApp Image 2025-08-23 at 13.06.04_b744af62.jpg" alt="H&B Nuts logo and branding" loading="lazy">
-        <img src="WhatsApp Image 2025-08-24 at 16.26.38_df3afcf6.jpg" alt="Pecans close-up" loading="lazy">
+        <!-- 1) WAS logo, nou die in-shell foto eerste -->
         <img src="WhatsApp Image 2025-08-24 at 16.26.38_45eda462.jpg" alt="In-shell pecans" loading="lazy">
-        <img src="WhatsApp Image 2025-08-24 at 16.26.39_a7f3d7dd.jpg" alt="Roasted pecans" loading="lazy">
+        <!-- 2) Bly dieselfde -->
+        <img src="WhatsApp Image 2025-08-24 at 16.26.38_df3afcf6.jpg" alt="Pecans close-up" loading="lazy">
+        <!-- 3) WAS in-shell, nou die logo hier -->
+        <img src="WhatsApp Image 2025-08-23 at 13.06.04_b744af62.jpg" alt="H&B Nuts logo and branding" loading="lazy">
+        <!-- 4) Bly dieselfde -->
+        <img src="WhatsApp Image 2025-08-24 at 16.26.39_a7f3d7dd.jpg" alt="Toasted pecans" loading="lazy">
       </div>
     </section>
 
@@ -176,7 +195,9 @@
           <a class="btn primary" href="https://wa.me/27842510175?text=Hi%20H%26B%20Nuts%2C%20I%27d%20like%20to%20order%20pecans!" target="_blank" rel="noopener">WhatsApp to Order</a>
           <a class="btn ghost" href="mailto:henbnuts@gmail.com">Email Orders</a>
         </div>
-        <p style="color:var(--muted); font-size:.95rem; margin-top:.8rem">Prices: R60 / 500g (in-shell) • R30 / 100g (roasted, out-of-shell). Flavours: Garlic, Garlic & Herb, Aromat.</p>
+        <p style="color:var(--muted); font-size:.95rem; margin-top:.8rem">
+          Prices: R60 / 500g (in-shell) • R30 / 75g (toasted, out-of-shell). Flavours: Garlic, Garlic & Herb, Aromat.
+        </p>
       </div>
     </section>
   </main>
